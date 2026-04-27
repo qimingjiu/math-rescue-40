@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>概率统计 · 公式速查 | 数学急救站</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="../index.html">首页</a>
+    <a href="trig.html">公式</a>
+    <a href="../templates.html">模板</a>
+    <a href="../tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="../index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+    <button class="btn-print" style="float:right;" onclick="window.print()">打印这一页</button>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">概率统计 · 急救包</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    最核心的公式 + 真题示范 + 踩坑提醒。<span class="note-red">大题做法去 <a href="../templates.html#prob" style="color:var(--ochre);">大题模板页</a>。</span>
+  </p>
+
+  <!-- 公式速查 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">1</span>公式速查</h2>
+
+    <div class="formula-block">
+      <div class="formula-name">古典概型 · 排列组合<span class="formula-tag">必背</span></div>
+      $$P(A) = \dfrac{m}{n} = \dfrac{\text{A 包含的基本事件数}}{\text{基本事件总数}}$$
+      $$A_n^m = \dfrac{n!}{(n-m)!},\quad C_n^m = \dfrac{n!}{m!(n-m)!}$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">二项分布 $B(n,p)$<span class="formula-tag">必背</span></div>
+      $$P(X=k) = C_n^k p^k (1-p)^{n-k}$$
+      $$E(X) = np,\quad D(X) = np(1-p)$$
+      <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 用条件：$n$ 次独立重复试验，每次成功率都是 $p$。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">超几何分布（不放回抽取）<span class="formula-tag">高频</span></div>
+      $$P(X=k) = \dfrac{C_M^k C_{N-M}^{n-k}}{C_N^n}$$
+      <p style="font-size:0.82rem; margin-top:6px;">$N$ 总数，$M$ 次品/目标个数，$n$ 抽取数。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">期望与方差通式<span class="formula-tag">必背</span></div>
+      $$E(X) = \sum x_i p_i,\quad D(X) = \sum (x_i - E(X))^2 p_i$$
+      $$E(aX+b) = aE(X) + b,\quad D(aX+b) = a^2 D(X)$$
+    </div>
+
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">更多公式补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        待补：正态分布 $3\sigma$ 原则 · 线性回归 · 独立性检验 $K^2$
+      </p>
+    </div>
+  </section>
+
+  <!-- 真题示范 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">真题示范 · 内容补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        将选 1 道近年高考概率大题，演示分布列三步法。
+      </p>
+    </div>
+  </section>
+
+  <!-- 踩坑提醒 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">3</span>这些坑别踩</h2>
+    <ul style="padding-left:20px; line-height:2;">
+      <li><span class="mark">二项 vs 超几何分不清</span>：放回是二项，不放回是超几何</li>
+      <li><span class="mark">分布列概率和不为 1</span>：写完一定要加起来验算，错一行整题塌</li>
+      <li><span class="mark">"至少"、"至多" 漏情况</span>：直接列正向算容易少，用 $1-P(\text{反向})$ 更稳</li>
+      <li><span class="mark">$D(aX)$ 系数没平方</span>：$D(aX) = a^2 D(X)$，不是 $a D(X)$</li>
+    </ul>
+    <div class="placeholder" style="margin-top:14px;">
+      <p style="font-size:0.85rem;">更多踩坑点持续补充中…</p>
+    </div>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="../index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">分布列写对，期望就稳了。</p>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

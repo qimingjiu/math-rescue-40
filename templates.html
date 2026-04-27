@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大题模板汇总 · 套路化拿步骤分 | 数学急救站</title>
+<meta name="description" content="高考数学六大题型答题模板：三角函数、数列、立体几何、概率、圆锥曲线、导数。即使做不出，也要拿步骤分。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+<style>
+  /* 题型导航条 */
+  .topic-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 12px;
+    background: var(--paper-deep);
+    border: 2px solid var(--ink);
+  }
+  .topic-nav a {
+    flex: 1 1 auto;
+    min-width: 90px;
+    text-align: center;
+    padding: 8px 10px;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--font-hand);
+    font-size: 0.9rem;
+    transition: all 0.1s;
+  }
+  .topic-nav a:hover { background: var(--ink); color: var(--paper); }
+  .topic-nav a.done {
+    border-left: 4px solid var(--ochre);
+  }
+  .topic-nav a.todo {
+    color: var(--ink-soft);
+    background: repeating-linear-gradient(45deg, var(--paper), var(--paper) 4px, var(--paper-deep) 4px, var(--paper-deep) 8px);
+  }
+  .topic-nav a.todo::after {
+    content: " ⌛";
+    font-size: 0.75rem;
+  }
+
+  /* 题型大标题 */
+  .topic-header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 16px;
+    margin: 36px 0 18px;
+    border-left: 6px solid var(--ochre);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-margin-top: 70px;
+  }
+  .topic-header h2 {
+    font-family: var(--font-hand);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+  .topic-header .topic-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+
+  /* 占位区块样式由 style.css 提供 */
+
+  /* 模板套路速览（每题型顶部一句话） */
+  .topic-tldr {
+    background: #fff8e8;
+    border-left: 4px solid var(--ochre);
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    font-size: 0.92rem;
+  }
+  .topic-tldr strong { color: var(--ochre); }
+
+  /* 步骤分预估表 */
+  .score-table {
+    width: 100%;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    border-collapse: collapse;
+  }
+  .score-table th, .score-table td {
+    border: 1px solid var(--grid);
+    padding: 6px 8px;
+    text-align: left;
+  }
+  .score-table th {
+    background: var(--paper-deep);
+    font-family: var(--font-hand);
+  }
+  .score-table td.score {
+    font-family: var(--font-mono);
+    color: var(--ochre);
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="modules/trig.html">公式</a>
+    <a href="templates.html" class="active">模板</a>
+    <a href="tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">大题模板汇总</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 18px;">
+    高考数学六大题型答题套路。<span class="note-red">题做不出也别空着——按模板写步骤就能拿分。</span>
+  </p>
+
+  <!-- 总纲：步骤分理论 -->
+  <section class="card">
+    <h2 class="card-title">先看这个：步骤分到底怎么给</h2>
+    <p style="font-size:0.92rem; line-height:1.85;">
+      高考数学解答题 <span class="mark">每道 12-17 分</span>，得分点是「步骤」不是「答案」。<br>
+      一道 12 分的题，<span class="note-red">就算最后算错了，把套路写出来也能拿 6-8 分</span>。
+    </p>
+    <table class="score-table">
+      <thead>
+        <tr><th>动作</th><th>能拿到</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>抄题、设未知数、写"由题意"</td><td class="score">1-2 分</td></tr>
+        <tr><td>用公式做了化简（哪怕没化对）</td><td class="score">2-3 分</td></tr>
+        <tr><td>列出关键方程或定理</td><td class="score">2-4 分</td></tr>
+        <tr><td>正确得到中间结论</td><td class="score">+ 4-6 分</td></tr>
+        <tr><td>最终答案正确</td><td class="score">+ 2-3 分</td></tr>
+      </tbody>
+    </table>
+    <p class="note-red" style="margin-top:12px; font-size:0.88rem;">
+      ※ 看到不会的题第一反应：写"设…"、"由…定理"，先把分捞起来。
+    </p>
+  </section>
+
+  <!-- 题型导航 -->
+  <nav class="topic-nav no-print" aria-label="题型快速跳转">
+    <a href="#trig" class="done">三角函数</a>
+    <a href="#sequence" class="todo">数列</a>
+    <a href="#solid" class="todo">立体几何</a>
+    <a href="#prob" class="todo">概率统计</a>
+    <a href="#conic" class="todo">圆锥曲线</a>
+    <a href="#deriv" class="todo">导数</a>
+  </nav>
+
+  <!-- ============ 1. 三角函数 ============ -->
+  <div class="topic-header" id="trig">
+    <h2>① 三角函数 / 解三角形</h2>
+    <div class="topic-meta">第 17 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>边角互化 → 求角 → 求边/面积。
+    80% 的题就这三步，化简对了等于做对了一半。
+  </div>
+
+  <section class="card">
+    <h3 class="card-title">套路总纲</h3>
+    <ol class="steps">
+      <li>
+        <strong>读题，标已知</strong>
+        <span class="step-note">把已知边、已知角圈出来，标 a/b/c 和 A/B/C 别搞混</span>
+      </li>
+      <li>
+        <strong>边角互化（关键一步）</strong><br>
+        看到 $a,b,c$ → 用 <em>正弦定理</em> 化为 $\sin A, \sin B, \sin C$<br>
+        看到全是角 → 用 <em>和差/二倍角/辅助角</em> 化简
+        <span class="step-note">这一步化对，题就成了一半</span>
+      </li>
+      <li>
+        <strong>求角</strong><br>
+        化简后通常得到 $\sin(A+B)=…$ 或 $\cos C=…$，直接解
+        <span class="step-note">注意角的范围：$A,B,C\in(0,\pi)$，$\sin$ 一个值可能对应两个角</span>
+      </li>
+      <li>
+        <strong>求边或面积（第二问）</strong><br>
+        求边：用 <em>正弦定理</em> 或 <em>余弦定理</em>，挑已知量多的<br>
+        求面积：$S=\tfrac{1}{2}ab\sin C$，缺什么补什么
+        <span class="step-note">求最值常用 $a^2+b^2\ge 2ab$ 或均值不等式</span>
+      </li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h3 class="card-title">三类常见题型变体</h3>
+
+    <div class="formula-block">
+      <div class="formula-name">题型 A · 给三角恒等式求角</div>
+      条件如：$\sqrt{3}\sin 2C-\cos 2C=1$<br>
+      <strong>套路：</strong> 辅助角公式 → 化为 $2\sin(2C-\tfrac{\pi}{6})=1$ → 解角
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">题型 B · 给边角混合关系求角</div>
+      条件如：$2a\cos B=2c-b$<br>
+      <strong>套路：</strong> 正弦定理边换角 → $2\sin A\cos B=2\sin C-\sin B$ → $\sin C=\sin(A+B)$ 展开 → 求 $A$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">题型 C · 已知一角和两边求面积/周长</div>
+      条件如：$C=\tfrac{\pi}{3}$，$c=2$，求 $S$ 最大值<br>
+      <strong>套路：</strong> 余弦定理列方程 $c^2=a^2+b^2-2ab\cos C$ → 用均值不等式 $a^2+b^2\ge 2ab$ → 求 $ab$ 最大值 → 代入 $S=\tfrac{1}{2}ab\sin C$
+    </div>
+  </section>
+
+  <section class="card">
+    <h3 class="card-title">真题示范 · 2023 新高考 I 卷 17 题</h3>
+
+    <div class="example">
+      <span class="example-tag">2023 · 新高考I卷</span>
+      <div class="example-q">
+        在 $\triangle ABC$ 中，已知 $\sqrt{3}\sin 2C - \cos 2C = 1$。<br>
+        (1) 求角 $C$；(2) 若 $a=2,\;b=3$，求 $\triangle ABC$ 的面积。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 套路：辅助角公式</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>看到 $\sqrt{3}\sin 2C - \cos 2C$ → 立刻用辅助角公式</li>
+          <li>$\sqrt{3}\sin 2C - \cos 2C = 2\sin\!\left(2C-\tfrac{\pi}{6}\right)$</li>
+          <li>所以 $\sin\!\left(2C-\tfrac{\pi}{6}\right)=\tfrac{1}{2}$</li>
+          <li>由 $C\in(0,\pi)$，解得 $C=\tfrac{\pi}{6}$ 或 $\tfrac{\pi}{2}$
+            <span class="step-note">多解情况是踩分点，必须分类讨论</span>
+          </li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：分类 + 面积公式</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>$C=\tfrac{\pi}{6}$ 时，$S=\tfrac{1}{2}\cdot 2\cdot 3\cdot\tfrac{1}{2}=\tfrac{3}{2}$</li>
+          <li>$C=\tfrac{\pi}{2}$ 时，$S=\tfrac{1}{2}\cdot 2\cdot 3\cdot 1=3$</li>
+          <li>所以 $S=\tfrac{3}{2}$ 或 $3$</li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 即使第（2）问算错，第（1）问写到辅助角化简就有 4 分，分类讨论再写一行又 2 分。<span class="mark">不要空着。</span>
+    </p>
+  </section>
+
+  <!-- ============ 2. 数列 ============ -->
+  <div class="topic-header" id="sequence">
+    <h2>② 数列</h2>
+    <div class="topic-meta">第 17/18 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>设首项与公差/比 → 列方程组 → 求通项 → 求和（看类型选公式）。
+  </div>
+
+  <div class="placeholder">
+    <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+    <div class="placeholder-title">数列大题模板 · 内容补充中</div>
+    <p style="font-size:0.85rem; margin-top:8px;">
+      将包含：<br>
+      · 等差/等比通项与求和模板<br>
+      · 错位相减、裂项相消<br>
+      · 已知 $S_n$ 求 $a_n$ 的标准解法<br>
+      · 真题示范
+    </p>
+  </div>
+
+  <!-- ============ 3. 立体几何 ============ -->
+  <div class="topic-header" id="solid">
+    <h2>③ 立体几何</h2>
+    <div class="topic-meta">第 19 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>第一问几何法证平行/垂直，第二问<span class="mark">建系用向量</span>算二面角。
+  </div>
+
+  <div class="placeholder">
+    <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+    <div class="placeholder-title">立体几何大题模板 · 内容补充中</div>
+    <p style="font-size:0.85rem; margin-top:8px;">
+      将包含：<br>
+      · 证平行/垂直的判定定理速查<br>
+      · 建系四步法（找原点 / 定轴 / 求点坐标 / 求向量）<br>
+      · 法向量求二面角公式<br>
+      · 真题示范
+    </p>
+  </div>
+
+  <!-- ============ 4. 概率统计 ============ -->
+  <div class="topic-header" id="prob">
+    <h2>④ 概率统计</h2>
+    <div class="topic-meta">第 18/19 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>读题分类 → 列分布列 → 求期望/方差。<span class="mark">分布列写错就全错</span>。
+  </div>
+
+  <div class="placeholder">
+    <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+    <div class="placeholder-title">概率统计大题模板 · 内容补充中</div>
+    <p style="font-size:0.85rem; margin-top:8px;">
+      将包含：<br>
+      · 古典概型 / 二项分布 / 超几何分布的区分<br>
+      · 分布列三步标准写法<br>
+      · 期望方差公式速查<br>
+      · 线性回归套路（不强求记，但要知道代入步骤）<br>
+      · 真题示范
+    </p>
+  </div>
+
+  <!-- ============ 5. 圆锥曲线 ============ -->
+  <div class="topic-header" id="conic">
+    <h2>⑤ 圆锥曲线（解析几何）</h2>
+    <div class="topic-meta">第 21 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>设直线 → 联立方程 → 韦达定理 → 代入条件。
+    <span class="note-red">即使算不到底，前 4 步就有 6 分。</span>
+  </div>
+
+  <div class="placeholder">
+    <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+    <div class="placeholder-title">圆锥曲线大题模板 · 内容补充中</div>
+    <p style="font-size:0.85rem; margin-top:8px;">
+      将包含：<br>
+      · 椭圆 / 抛物线标准方程速查<br>
+      · 联立方程的"五步法"（设 → 立 → 判 → 韦达 → 代）<br>
+      · 弦长公式、点到直线距离<br>
+      · 何时设 $y=kx+b$、何时设 $x=my+t$<br>
+      · 真题示范
+    </p>
+  </div>
+
+  <!-- ============ 6. 导数 ============ -->
+  <div class="topic-header" id="deriv">
+    <h2>⑥ 导数</h2>
+    <div class="topic-meta">第 22 题 · 12 分</div>
+  </div>
+
+  <div class="topic-tldr">
+    <strong>核心套路：</strong>求导 → 分析正负 → 列表 → 结论。<span class="mark">第一问稳拿，第二问能写多少写多少</span>。
+  </div>
+
+  <div class="placeholder">
+    <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+    <div class="placeholder-title">导数大题模板 · 内容补充中</div>
+    <p style="font-size:0.85rem; margin-top:8px;">
+      将包含：<br>
+      · 求单调区间标准四步<br>
+      · 切线方程模板<br>
+      · 证不等式的"构造函数法"<br>
+      · 含参讨论的分类思路<br>
+      · 真题示范
+    </p>
+  </div>
+
+  <!-- 收尾 -->
+  <section class="card" style="margin-top:36px;">
+    <h2 class="card-title">最后一句话</h2>
+    <p style="font-family: var(--font-hand); font-size: 1.05rem; line-height: 1.9;">
+      考场上看到大题别先慌，<span class="mark">把套路第一步抄下来再说</span>。<br>
+      数学不是"会就会、不会就不会"的科目——<br>
+      <span class="note-red">套路写得整齐，分就给得整齐。</span>
+    </p>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">套路写满，比硬算更划算。</p>
+
+<script src="js/main.js"></script>
+</body>
+</html>

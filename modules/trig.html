@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三角函数 · 公式速查 + 大题模板 | 数学急救站</title>
+<link rel="stylesheet" href="../css/style.css">
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="../index.html">首页</a>
+    <a href="trig.html" class="active">公式</a>
+    <a href="../templates.html">模板</a>
+    <a href="../tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="../index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+    <button class="btn-print" style="float:right;" onclick="window.print()">打印这一页</button>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">三角函数 · 急救包</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    公式速查 → 真题示范 → 踩坑提醒。<span class="note-red">大题做法去 <a href="../templates.html" style="color:var(--ochre);">大题模板页</a>。</span>
+  </p>
+
+  <!-- 公式速查 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">1</span>公式速查</h2>
+
+    <div class="formula-block">
+      <div class="formula-name">诱导公式 · 口诀「奇变偶不变，符号看象限」<span class="formula-tag">必背</span></div>
+      $$\sin(\pi-\alpha)=\sin\alpha,\quad \cos(\pi-\alpha)=-\cos\alpha$$
+      $$\sin\!\left(\tfrac{\pi}{2}-\alpha\right)=\cos\alpha,\quad \cos\!\left(\tfrac{\pi}{2}-\alpha\right)=\sin\alpha$$
+      $$\sin(-\alpha)=-\sin\alpha,\quad \cos(-\alpha)=\cos\alpha$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">两角和差<span class="formula-tag">必背</span></div>
+      $$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$$
+      $$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$$
+      $$\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">二倍角<span class="formula-tag">必背</span></div>
+      $$\sin 2\alpha=2\sin\alpha\cos\alpha$$
+      $$\cos 2\alpha=\cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$$
+      $$\tan 2\alpha=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">降幂公式（处理 $\cos^2\alpha$、$\sin^2\alpha$ 必用）<span class="formula-tag">高频</span></div>
+      $$\sin^2\alpha=\dfrac{1-\cos 2\alpha}{2},\quad \cos^2\alpha=\dfrac{1+\cos 2\alpha}{2}$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">辅助角公式（化一次三角为单一正弦）<span class="formula-tag">救命</span></div>
+      $$a\sin x+b\cos x=\sqrt{a^2+b^2}\,\sin(x+\varphi),\;\text{其中}\;\tan\varphi=\dfrac{b}{a}$$
+      <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 形如 $\sin x+\sqrt{3}\cos x$ 这类题型必用。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">正弦定理 / 余弦定理（解三角形必用）<span class="formula-tag">必背</span></div>
+      $$\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R$$
+      $$a^2=b^2+c^2-2bc\cos A$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">三角形面积<span class="formula-tag">高频</span></div>
+      $$S=\tfrac{1}{2}ab\sin C=\tfrac{1}{2}bc\sin A=\tfrac{1}{2}ac\sin B$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">常用特殊角值表</div>
+      <table style="width:100%; font-family:var(--font-mono); font-size:0.88rem; border-collapse:collapse; margin-top:6px;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--ink);">
+            <th style="text-align:left; padding:4px;">角度</th>
+            <th style="padding:4px;">0°</th>
+            <th style="padding:4px;">30°</th>
+            <th style="padding:4px;">45°</th>
+            <th style="padding:4px;">60°</th>
+            <th style="padding:4px;">90°</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:4px;">sin</td><td style="text-align:center;">0</td><td style="text-align:center;">½</td><td style="text-align:center;">√2/2</td><td style="text-align:center;">√3/2</td><td style="text-align:center;">1</td></tr>
+          <tr><td style="padding:4px;">cos</td><td style="text-align:center;">1</td><td style="text-align:center;">√3/2</td><td style="text-align:center;">√2/2</td><td style="text-align:center;">½</td><td style="text-align:center;">0</td></tr>
+          <tr><td style="padding:4px;">tan</td><td style="text-align:center;">0</td><td style="text-align:center;">√3/3</td><td style="text-align:center;">1</td><td style="text-align:center;">√3</td><td style="text-align:center;">/</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 真题示范 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
+
+    <div class="example">
+      <span class="example-tag">2023 · 新高考I卷 · 第17题</span>
+      <div class="example-q">
+        在 $\triangle ABC$ 中，已知 $\sqrt{3}\sin 2C - \cos 2C = 1$。<br>
+        (1) 求角 $C$；<br>
+        (2) 若 $a=2,\;b=3$，求 $\triangle ABC$ 的面积。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 套路：辅助角公式</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>看到 $\sqrt{3}\sin 2C - \cos 2C$ → 立刻用辅助角公式</li>
+          <li>$\sqrt{3}\sin 2C - \cos 2C = 2\!\left(\tfrac{\sqrt{3}}{2}\sin 2C - \tfrac{1}{2}\cos 2C\right) = 2\sin\!\left(2C-\tfrac{\pi}{6}\right)$</li>
+          <li>所以 $2\sin\!\left(2C-\tfrac{\pi}{6}\right)=1$，即 $\sin\!\left(2C-\tfrac{\pi}{6}\right)=\tfrac{1}{2}$</li>
+          <li>由 $C\in(0,\pi)$，得 $2C-\tfrac{\pi}{6}\in\!\left(-\tfrac{\pi}{6},\tfrac{11\pi}{6}\right)$，<br>
+          解得 $2C-\tfrac{\pi}{6}=\tfrac{\pi}{6}$ 或 $\tfrac{5\pi}{6}$，即 $C=\tfrac{\pi}{6}$ 或 $\tfrac{\pi}{2}$
+          <span class="step-note">这一步要小心，多解情况是踩分点</span>
+          </li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：分类讨论 + 面积公式</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>当 $C=\tfrac{\pi}{6}$：$S=\tfrac{1}{2}ab\sin C=\tfrac{1}{2}\cdot 2\cdot 3\cdot\tfrac{1}{2}=\tfrac{3}{2}$</li>
+          <li>当 $C=\tfrac{\pi}{2}$：$S=\tfrac{1}{2}ab\sin C=\tfrac{1}{2}\cdot 2\cdot 3\cdot 1=3$</li>
+          <li>所以 $S=\tfrac{3}{2}$ 或 $3$</li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 即使第（2）问算错，第（1）问把辅助角化简写出来就有 4 分；分类讨论再写一行又有 2 分。<span class="mark">不要空着。</span>
+    </p>
+  </section>
+
+  <!-- 踩坑提醒 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">3</span>这些坑别踩</h2>
+    <ul style="padding-left:20px; line-height:2;">
+      <li><span class="mark">忘了角的范围</span>：求出 $\sin A=\tfrac{1}{2}$ 不一定 $A=\tfrac{\pi}{6}$，可能是 $\tfrac{5\pi}{6}$</li>
+      <li><span class="mark">边角混算</span>：式子里 $a$ 和 $\sin A$ 不能直接乘除，要先用正弦定理统一</li>
+      <li><span class="mark">化简时漏系数</span>：辅助角公式里 $\sqrt{a^2+b^2}$ 容易写错</li>
+      <li><span class="mark">面积题忘了多解</span>：上面真题就是典型例子</li>
+      <li><span class="mark">单位不统一</span>：弧度和角度混着用，特殊角值表查错</li>
+    </ul>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="../index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">三角函数稳了，第 17 题就稳了。</p>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

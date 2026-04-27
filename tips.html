@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>选填技巧 · 不会做也能蒙对 | 数学急救站</title>
+<meta name="description" content="高考数学选择题、填空题、多选题的 5 个应急技巧：特殊值、互斥排除、量纲奇偶、端点效应、宁缺毋滥。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="modules/trig.html">公式</a>
+    <a href="templates.html">模板</a>
+    <a href="tips.html" class="active">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+    <button class="btn-print" style="float:right;" onclick="window.print()">打印这一页</button>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">选填技巧 · 不会做也能蒙对</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    高考数学选填占 <span class="mark">80 分</span>，做对 60% 就有 48 分托底。<span class="note-red">这 5 个方法专治"会做但来不及"和"不会做但又不能空"。</span>
+  </p>
+
+  <!-- 总纲 -->
+  <section class="card">
+    <h2 class="card-title">先看这个：选填的真正敌人是时间</h2>
+    <p style="font-size:0.92rem; line-height:1.85;">
+      高考数学选择 8 道、填空 3-4 道，建议时间 <span class="mark">40 分钟以内</span>。<br>
+      意思是平均每道 <span class="note-red">3-4 分钟</span>，一道做不出立刻用技巧蒙——磨到 8 分钟，后面大题就崩了。
+    </p>
+    <p class="note-red" style="margin-top:12px; font-size:0.88rem;">
+      ※ 选填策略口诀：<span class="mark">能算就算，算不出就蒙，蒙不准就跳过，最后再回头。</span>
+    </p>
+  </section>
+
+  <!-- 技巧 1：特殊值法 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">1</span>特殊值法</h2>
+    <p style="font-size:0.92rem; margin-bottom:10px;">
+      题目说"对任意 $x\in\mathbb{R}$"、"对所有满足条件的…"——立即代特殊值进去验证。
+    </p>
+
+    <div class="formula-block">
+      <div class="formula-name">最常用的特殊值</div>
+      $$x = 0,\;1,\;-1,\;\dfrac{1}{2},\;\dfrac{\pi}{4},\;\dfrac{\pi}{2}$$
+      <p style="font-size:0.82rem; margin-top:6px;">三角题用 $\tfrac{\pi}{4}$ 或 $\tfrac{\pi}{2}$，函数题用 $0,1,-1$，含 $a^2$ 的用 $a=1$ 或 $a=2$。</p>
+    </div>
+
+    <div class="example">
+      <span class="example-tag">用法示范</span>
+      <div class="example-q">
+        若函数 $f(x) = ax^3 + bx + c$ 满足 $f(-x) = -f(x)$，则下列哪项一定成立？<br>
+        A. $a = 0$　B. $b = 0$　C. $c = 0$　D. $a + b = 0$
+      </div>
+      <div class="example-a">
+        <strong class="note-red">直接代 $x = 0$：</strong>
+        $f(0) = c$，$-f(0) = -c$，由 $f(-0) = -f(0)$ 得 $c = -c$，所以 $c = 0$。<br>
+        <span class="mark">3 秒选 C。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技巧 2：互斥/包含排除 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">2</span>选项互斥/包含排除</h2>
+    <p style="font-size:0.92rem; margin-bottom:10px;">
+      看选项之间的<span class="mark">逻辑关系</span>——如果两个选项互相矛盾，答案大概率在它俩之中；如果一个包含另一个，被包含的几乎不可能是答案。
+    </p>
+
+    <div class="formula-block">
+      <div class="formula-name">三种典型情况</div>
+      <ul style="padding-left:18px; line-height:1.9; font-size:0.9rem;">
+        <li><strong>互斥型：</strong>A 说"$a > 0$"，B 说"$a < 0$"——答案多半是 A 或 B</li>
+        <li><strong>包含型：</strong>A 说"$x \in (1,3)$"，B 说"$x \in (1,5)$"——A 是 B 的子集，B 范围更全更可能对</li>
+        <li><strong>对称型：</strong>4 个选项有 3 个长得很像、1 个特别——往往那 3 个像的里有答案</li>
+      </ul>
+    </div>
+
+    <p class="note-red" style="font-size:0.85rem; margin-top:10px;">
+      ※ 高考出题人不会出"明显错"的选项，每个选项都是用错误思路推出来的——你看选项就能反推可能的解题方向。
+    </p>
+  </section>
+
+  <!-- 技巧 3：量纲/奇偶/边界值检验 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">3</span>量纲 / 奇偶 / 边界值检验</h2>
+    <p style="font-size:0.92rem; margin-bottom:10px;">
+      算完一个答案不放心？用这三招快速验：
+    </p>
+
+    <div class="formula-block">
+      <div class="formula-name">量纲检验</div>
+      <p style="font-size:0.9rem;">
+        体积题答案带 $\pi$ 没？面积题单位对吗？概率值 <span class="mark">必须在 $[0,1]$</span>，方差<span class="mark">必须 $\ge 0$</span>。
+      </p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">奇偶性检验</div>
+      <p style="font-size:0.9rem;">
+        题目说"$f(x)$ 为奇函数"，最后答案应该满足 $f(-x) = -f(x)$；偶函数则 $f(-x) = f(x)$。代一个值反向验证。
+      </p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">边界值检验</div>
+      <p style="font-size:0.9rem;">
+        求范围题（如 $a \in (?,?)$），代<span class="mark">端点值</span>验证：端点要不要取？等号要不要带？这是高考最常踩的分。
+      </p>
+    </div>
+  </section>
+
+  <!-- 技巧 4：端点效应 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">4</span>填空题端点效应（"猜整数"）</h2>
+    <p style="font-size:0.92rem; margin-bottom:10px;">
+      填空题答案以 <span class="mark">整数、简单分数、$\sqrt{2},\sqrt{3},\pi$ 之类</span>为主——奇形怪状的答案大概率算错了。
+    </p>
+
+    <div class="formula-block">
+      <div class="formula-name">高考填空答案的"长相"</div>
+      <ul style="padding-left:18px; line-height:1.9; font-size:0.9rem;">
+        <li>整数：$0, 1, 2, 3, -1, -2$ 居多</li>
+        <li>简单分数：$\tfrac{1}{2}, \tfrac{1}{3}, \tfrac{3}{4}$</li>
+        <li>含根号：$\sqrt{2}, \sqrt{3}, 2\sqrt{2}, \tfrac{\sqrt{3}}{2}$</li>
+        <li>含 $\pi$：$\tfrac{\pi}{6}, \tfrac{\pi}{4}, \tfrac{\pi}{3}, \tfrac{2\pi}{3}$</li>
+        <li>含 $e$ 或 $\ln$：导数题常见</li>
+      </ul>
+    </div>
+
+    <p class="note-red" style="font-size:0.85rem; margin-top:10px;">
+      ※ 算出 $\dfrac{17}{23}$ 这种诡异数字——99% 是某一步算错了。<span class="mark">回头查上一步。</span>
+    </p>
+  </section>
+
+  <!-- 技巧 5：多选题"宁缺毋滥" -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">5</span>多选题策略：宁缺毋滥</h2>
+    <p style="font-size:0.92rem; margin-bottom:10px;">
+      新高考多选题的得分规则：<span class="mark">全对 6 分 / 部分对 3 分 / 选错 0 分</span>——所以"少选"比"多选"安全得多。
+    </p>
+
+    <div class="formula-block">
+      <div class="formula-name">三档应对策略</div>
+      <ul style="padding-left:18px; line-height:1.9; font-size:0.9rem;">
+        <li><strong>100% 确定的选项：</strong>选上</li>
+        <li><strong>50% 把握的选项：</strong>不选（多选错一个就 0 分，宁可少拿 3 分也别赌）</li>
+        <li><strong>完全不会判断的：</strong>不选</li>
+      </ul>
+    </div>
+
+    <div class="example">
+      <span class="example-tag">取舍示范</span>
+      <div class="example-q">
+        某多选题选项 ABCD，你判断：A 一定对、B 大概率对（70%）、C 不知道、D 大概率错。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">正确策略：只选 A，拿 3 分。</strong><br>
+        <span style="font-size:0.85rem;">为什么不选 B？因为如果 B 错，整题 0 分；只选 A 至少保 3 分。<span class="mark">3 分到手好过 6 分赌赢 70%、赌输 30%。</span></span>
+      </div>
+    </div>
+
+    <p class="note-red" style="font-size:0.85rem; margin-top:10px;">
+      ※ 数学期望算给你看：<br>
+      只选 A：稳拿 3 分<br>
+      选 AB：$0.7 \times 6 + 0.3 \times 0 = 4.2$ 分（但风险高）<br>
+      <span class="mark">看起来期望高，但 30% 拿 0 分的体验在考场上会把你击溃。</span>
+    </p>
+  </section>
+
+  <!-- 收尾 -->
+  <section class="card">
+    <h2 class="card-title">最后一句话</h2>
+    <p style="font-family: var(--font-hand); font-size: 1.05rem; line-height: 1.9;">
+      技巧不能替代会做，但能<span class="mark">替你抢回时间</span>。<br>
+      考场上前 40 分钟选填能稳住 60+ 分，<br>
+      <span class="note-red">大题写不完也已经赢了一半。</span>
+    </p>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">不会做不丢人，空着才丢分。</p>
+
+<script src="js/main.js"></script>
+</body>
+</html>

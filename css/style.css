@@ -1,0 +1,398 @@
+/* ========== 答题卡风格 · 全局变量 ========== */
+:root {
+  --paper: #f5f0e1;          /* 试卷米黄 */
+  --paper-deep: #ebe3cc;     /* 深一点的米黄（区块底） */
+  --ink: #1a1a1a;            /* 铅笔黑 */
+  --ink-soft: #4a4a4a;       /* 二级文字 */
+  --grid: #c9bfa3;           /* 网格线（淡墨） */
+  --red: #c8312b;            /* 老师批改红 */
+  --red-soft: #e8a5a1;       /* 浅红（高亮底） */
+  --ochre: #a0432b;          /* 赭石红（倒计时主色） */
+  --blue: #2c4a7a;           /* 圆珠笔蓝 */
+  --green: #4a7a3c;          /* 对勾绿 */
+  --shadow: 2px 2px 0 var(--ink);
+
+  --font-hand: "Kaiti SC", "KaiTi", "STKaiti", "楷体", serif;
+  --font-mono: "SF Mono", "Courier New", monospace;
+  --font-base: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* ========== Reset ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-base);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ========== 顶栏 ========== */
+.topbar {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topbar .logo {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.topbar .logo .stamp {
+  display: inline-block;
+  border: 2px solid var(--red);
+  color: var(--red);
+  padding: 2px 8px;
+  margin-left: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  transform: rotate(-3deg);
+}
+.topbar nav a {
+  color: var(--paper);
+  text-decoration: none;
+  margin-left: 14px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+.topbar nav a:hover, .topbar nav a.active { opacity: 1; border-bottom: 2px solid var(--red); }
+
+/* ========== 容器 ========== */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* ========== 答题卡区块 ========== */
+.card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.card-title {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: bold;
+  border-bottom: 2px dashed var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title::before {
+  content: "▌";
+  color: var(--red);
+}
+.card-num {
+  display: inline-block;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 24px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ========== 倒计时（首页主视觉） ========== */
+.countdown-card {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 32px 20px;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.countdown-card::before {
+  content: "高考倒计时";
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  opacity: 0.6;
+}
+.countdown-card::after {
+  content: "DAYS LEFT";
+  position: absolute;
+  bottom: 8px;
+  right: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  opacity: 0.5;
+  font-family: var(--font-mono);
+}
+.countdown-num {
+  font-family: var(--font-mono);
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--ochre);
+  text-shadow: 3px 3px 0 #6b2818;
+}
+.countdown-label {
+  margin-top: 10px;
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.countdown-quote {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(245, 240, 225, 0.3);
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  opacity: 0.92;
+}
+.countdown-quote::before { content: "「 "; opacity: 0.6; }
+.countdown-quote::after { content: " 」"; opacity: 0.6; }
+
+/* ========== 今日任务 ========== */
+.task-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--grid);
+  align-items: flex-start;
+}
+.task-item:last-child { border-bottom: none; }
+.task-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--red);
+  margin-top: 2px;
+}
+.task-check.done::after { content: "✓"; }
+.task-content { flex: 1; }
+.task-title { font-weight: bold; }
+.task-desc { font-size: 0.88rem; color: var(--ink-soft); margin-top: 2px; }
+
+/* ========== 紧急通道（四大入口） ========== */
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.entry-card {
+  background: var(--paper-deep);
+  border: 2px solid var(--ink);
+  padding: 16px 12px;
+  text-decoration: none;
+  color: var(--ink);
+  text-align: center;
+  transition: transform 0.1s;
+  position: relative;
+}
+.entry-card:hover, .entry-card:active { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+.entry-card .entry-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--red);
+  letter-spacing: 2px;
+}
+.entry-card .entry-title {
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 4px;
+}
+.entry-card .entry-desc {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ========== 公式速查 ========== */
+.formula-block {
+  background: var(--paper-deep);
+  border-left: 4px solid var(--red);
+  padding: 12px 14px;
+  margin: 10px 0;
+}
+.formula-block .formula-name {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+  font-family: var(--font-hand);
+}
+.formula-block .formula-tag {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ========== 大题模板（步骤） ========== */
+.steps {
+  counter-reset: step;
+  list-style: none;
+}
+.steps li {
+  position: relative;
+  padding: 10px 0 10px 40px;
+  border-bottom: 1px dashed var(--grid);
+}
+.steps li::before {
+  counter-increment: step;
+  content: "Step " counter(step);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2px 6px;
+  letter-spacing: 1px;
+}
+.steps li:last-child { border-bottom: none; }
+.step-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--red);
+  font-family: var(--font-hand);
+}
+.step-note::before { content: "※ "; }
+
+/* ========== 真题示范 ========== */
+.example {
+  background: #fff8e8;
+  border: 1px dashed var(--ink);
+  padding: 14px;
+  margin: 12px 0;
+}
+.example .example-tag {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  font-size: 0.72rem;
+  padding: 1px 6px;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  letter-spacing: 1px;
+}
+.example .example-q { font-weight: bold; margin-bottom: 8px; }
+.example .example-a { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--grid); }
+
+/* ========== 红色批注（高亮重点） ========== */
+.mark {
+  background: linear-gradient(transparent 60%, var(--red-soft) 60%);
+  padding: 0 2px;
+  font-weight: bold;
+}
+.note-red {
+  color: var(--red);
+  font-family: var(--font-hand);
+}
+
+/* ========== 底部一句话 ========== */
+.footer-quote {
+  text-align: center;
+  padding: 30px 16px 20px;
+  font-family: var(--font-hand);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  border-top: 1px dashed var(--grid);
+  margin-top: 40px;
+}
+.footer-quote::before { content: "— "; }
+.footer-quote::after { content: " —"; }
+
+/* ========== 快捷返回顶部按钮 ========== */
+.btn-print {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-hand);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.btn-print:hover { background: var(--red); }
+
+/* ========== 占位区块（内容补充中） ========== */.placeholder {
+  border: 2px dashed var(--grid);
+  padding: 24px 18px;
+  text-align: center;
+  color: var(--ink-soft);
+  background: var(--paper);
+  margin-bottom: 24px;
+}
+.placeholder-title {
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.placeholder-stamp {
+  display: inline-block;
+  border: 2px solid var(--ochre);
+  color: var(--ochre);
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  transform: rotate(-2deg);
+}
+
+/* ========== 工具类（小调整复用） ========== */
+.note-red.small { font-size: 0.9rem; margin-bottom: 12px; }
+.note-red.task-foot { margin-top: 14px; font-size: 0.88rem; }
+.task-link { color: var(--ochre); }
+
+/* ========== 桌面增强 ========== */
+@media (min-width: 768px) {
+  .container { padding: 32px 24px; }
+  .countdown-num { font-size: 7rem; }
+  .entry-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ========== 打印（一页纸）========== */
+@media print {
+  body { background: white; }
+  .topbar, .footer-quote, .btn-print, .no-print { display: none !important; }
+  .card { box-shadow: none; border: 1px solid #000; page-break-inside: avoid; }
+  .container { max-width: 100%; padding: 0; }
+}

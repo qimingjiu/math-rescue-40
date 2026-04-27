@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导数 · 公式速查 | 数学急救站</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="../index.html">首页</a>
+    <a href="trig.html">公式</a>
+    <a href="../templates.html">模板</a>
+    <a href="../tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="../index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+    <button class="btn-print" style="float:right;" onclick="window.print()">打印这一页</button>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">导数 · 急救包</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    最核心的公式 + 真题示范 + 踩坑提醒。<span class="note-red">大题做法去 <a href="../templates.html#deriv" style="color:var(--ochre);">大题模板页</a>。</span>
+  </p>
+
+  <!-- 公式速查 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">1</span>公式速查</h2>
+
+    <div class="formula-block">
+      <div class="formula-name">基本求导公式表<span class="formula-tag">必背</span></div>
+      $$(C)' = 0,\quad (x^n)' = nx^{n-1}$$
+      $$(\sin x)' = \cos x,\quad (\cos x)' = -\sin x$$
+      $$(e^x)' = e^x,\quad (a^x)' = a^x\ln a$$
+      $$(\ln x)' = \dfrac{1}{x},\quad (\log_a x)' = \dfrac{1}{x\ln a}$$
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">求导四则运算<span class="formula-tag">必背</span></div>
+      $$[f(x)\pm g(x)]' = f'(x)\pm g'(x)$$
+      $$[f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)$$
+      $$\left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$$
+      <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 商的求导：分子是「前导后不导 减 前不导后导」，顺序别反！</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">复合函数求导<span class="formula-tag">高频</span></div>
+      $$[f(g(x))]' = f'(g(x))\cdot g'(x)$$
+      <p style="font-size:0.82rem; margin-top:6px;">"由外向内层层剥皮"，每剥一层乘上里层的导数。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">切线方程模板<span class="formula-tag">救命</span></div>
+      $$y - y_0 = f'(x_0)(x - x_0)$$
+      <p style="font-size:0.82rem; margin-top:6px;">$f'(x_0)$ 是斜率，$(x_0, y_0)$ 是切点。<span class="note-red">注意区分「在」点和「过」点：「过」点不一定是切点，要先设切点再列方程。</span></p>
+    </div>
+
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">更多公式补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        待补：单调区间标准四步 · 极值/最值判定 · 含参讨论思路
+      </p>
+    </div>
+  </section>
+
+  <!-- 真题示范 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">真题示范 · 内容补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        将选 1 道近年高考导数大题，演示求单调区间四步法。
+      </p>
+    </div>
+  </section>
+
+  <!-- 踩坑提醒 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">3</span>这些坑别踩</h2>
+    <ul style="padding-left:20px; line-height:2;">
+      <li><span class="mark">忘了写定义域</span>：求单调区间第一步必须写定义域，否则区间错</li>
+      <li><span class="mark">"在"点 vs "过"点</span>：「过」点不一定就是切点，要先设切点 $(x_0, y_0)$ 再代</li>
+      <li><span class="mark">极值不等于最值</span>：闭区间最值要把端点一起比</li>
+      <li><span class="mark">参数讨论漏情况</span>：含 $a$ 的题，按 $a > 0$、$a = 0$、$a < 0$ 分类，一类不能少</li>
+    </ul>
+    <div class="placeholder" style="margin-top:14px;">
+      <p style="font-size:0.85rem;">更多踩坑点持续补充中…</p>
+    </div>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="../index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">求导写对，第一问稳拿 4 分。</p>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

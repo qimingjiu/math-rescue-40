@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>圆锥曲线 · 公式速查 | 数学急救站</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false});"></script>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="../index.html">首页</a>
+    <a href="trig.html">公式</a>
+    <a href="../templates.html">模板</a>
+    <a href="../tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="../index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+    <button class="btn-print" style="float:right;" onclick="window.print()">打印这一页</button>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">圆锥曲线 · 急救包</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    最核心的公式 + 真题示范 + 踩坑提醒。<span class="note-red">大题做法去 <a href="../templates.html#conic" style="color:var(--ochre);">大题模板页</a>。</span>
+  </p>
+
+  <!-- 公式速查 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">1</span>公式速查</h2>
+
+    <div class="formula-block">
+      <div class="formula-name">椭圆 · 标准方程（焦点在 x 轴）<span class="formula-tag">必背</span></div>
+      $$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\quad(a>b>0)$$
+      $$c^2 = a^2 - b^2,\quad e = \dfrac{c}{a}\in(0,1)$$
+      <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 椭圆是 $a^2 - b^2$；双曲线才是 $a^2 + b^2$，别混了。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">抛物线 · 标准方程<span class="formula-tag">必背</span></div>
+      $$y^2 = 2px\;(p>0)$$
+      <p style="font-size:0.82rem; margin-top:6px;">焦点 $(\tfrac{p}{2}, 0)$，准线 $x = -\tfrac{p}{2}$。<br>
+      <span class="note-red">焦半径：$|PF| = x_0 + \tfrac{p}{2}$（横坐标加半个 p）。</span></p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">弦长公式<span class="formula-tag">救命</span></div>
+      $$|AB| = \sqrt{1+k^2}\cdot|x_1 - x_2| = \sqrt{1+k^2}\cdot\sqrt{(x_1+x_2)^2 - 4x_1 x_2}$$
+      <p style="font-size:0.82rem; margin-top:6px;">把 $x_1+x_2$、$x_1 x_2$ 代入韦达定理结果即可，<span class="mark">不用解出 $x_1$、$x_2$</span>。</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">点到直线距离<span class="formula-tag">高频</span></div>
+      $$d = \dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$
+      <p style="font-size:0.82rem; margin-top:6px;">直线写成 $Ax + By + C = 0$ 标准形式，注意分子加绝对值。</p>
+    </div>
+
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">更多公式补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        待补：双曲线方程 · 椭圆焦点弦/通径 · 圆与圆的位置关系
+      </p>
+    </div>
+  </section>
+
+  <!-- 真题示范 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
+    <div class="placeholder">
+      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
+      <div class="placeholder-title">真题示范 · 内容补充中</div>
+      <p style="font-size:0.85rem; margin-top:8px;">
+        将选 1 道近年高考圆锥曲线大题，演示「联立五步法」。
+      </p>
+    </div>
+  </section>
+
+  <!-- 踩坑提醒 -->
+  <section class="card">
+    <h2 class="card-title"><span class="card-num">3</span>这些坑别踩</h2>
+    <ul style="padding-left:20px; line-height:2;">
+      <li><span class="mark">直线没考虑斜率不存在</span>：设 $y = kx + b$ 漏了 $x = m$ 这种竖直线情况</li>
+      <li><span class="mark">$\Delta > 0$ 没写</span>：联立得二次方程要写判别式大于零（保证两交点），常考踩分点</li>
+      <li><span class="mark">焦点弦公式记错</span>：抛物线 $|PF| = x_0 + \tfrac{p}{2}$，椭圆是 $a - ex_0$ / $a + ex_0$</li>
+      <li><span class="mark">联立后忘了用韦达</span>：直接硬解 $x_1$、$x_2$ 出根号，运算量爆炸</li>
+    </ul>
+    <div class="placeholder" style="margin-top:14px;">
+      <p style="font-size:0.85rem;">更多踩坑点持续补充中…</p>
+    </div>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="../index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">联立写完 + 韦达写满 = 6 分到手。</p>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

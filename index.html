@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学急救站 · Math Rescue 40</title>
+<meta name="description" content="高考数学最后40天保分指南。不教学，只急救。公式速查、大题模板、选填技巧。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="index.html" class="active">首页</a>
+    <a href="modules/trig.html">公式</a>
+    <a href="templates.html">模板</a>
+    <a href="tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- 倒计时 -->
+  <div class="countdown-card">
+    <div class="countdown-num"><span id="countdown-num">--</span></div>
+    <div class="countdown-label">距 离 高 考</div>
+    <div class="countdown-quote" id="quote">撑住，最后一个月。</div>
+  </div>
+
+  <!-- 今日任务（由 JS 根据当前星期渲染；下面是 JS 失败时的兜底内容） -->
+  <section class="card">
+    <h2 class="card-title" id="today-title">今日任务</h2>
+    <div id="today-tasks">
+      <noscript>
+        <p class="note-red small">
+          ※ 这个页面需要 JavaScript 才能显示每日任务。请在浏览器里开启 JS，或直接看下面的应急导航。
+        </p>
+      </noscript>
+      <div class="task-item">
+        <span class="task-check"></span>
+        <div class="task-content">
+          <div class="task-title">先看一遍 → <a href="modules/trig.html" class="task-link">公式速查</a></div>
+          <div class="task-desc">挑一个最薄弱的题型，把核心公式过一遍</div>
+        </div>
+      </div>
+      <div class="task-item">
+        <span class="task-check"></span>
+        <div class="task-content">
+          <div class="task-title">再过一遍 → <a href="templates.html" class="task-link">大题模板</a></div>
+          <div class="task-desc">不抄不写，知道每种大题的套路第一步怎么写</div>
+        </div>
+      </div>
+      <div class="task-item">
+        <span class="task-check"></span>
+        <div class="task-content">
+          <div class="task-title">最后看一眼 → <a href="tips.html" class="task-link">选填技巧</a></div>
+          <div class="task-desc">5 个应急方法，不会做也能蒙对</div>
+        </div>
+      </div>
+      <p class="note-red task-foot">
+        ※ 任务勾选保存在这台设备，每天自动重置。
+      </p>
+    </div>
+  </section>
+
+  <!-- 紧急通道 -->
+  <section class="card">
+    <h2 class="card-title">紧急通道</h2>
+    <div class="entry-grid">
+      <a href="modules/trig.html" class="entry-card">
+        <div class="entry-num">01</div>
+        <div class="entry-title">公式速查</div>
+        <div class="entry-desc">一页打印 / 考前翻</div>
+      </a>
+      <a href="templates.html" class="entry-card">
+        <div class="entry-num">02</div>
+        <div class="entry-title">大题模板</div>
+        <div class="entry-desc">套路化拿步骤分</div>
+      </a>
+      <a href="tips.html" class="entry-card">
+        <div class="entry-num">03</div>
+        <div class="entry-title">选填技巧</div>
+        <div class="entry-desc">不会做也能蒙对</div>
+      </a>
+      <a href="#" class="entry-card" onclick="return false;">
+        <div class="entry-num">04</div>
+        <div class="entry-title">资源库</div>
+        <div class="entry-desc">真题 + 工具</div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<p class="footer-quote">撑住，最后一个月，我们都在</p>
+
+<script src="js/main.js"></script>
+</body>
+</html>
