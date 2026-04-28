@@ -58,25 +58,50 @@
       <p style="font-size:0.82rem; margin-top:6px;">$\vec{a}$ 是直线方向向量，$\vec{n}$ 是平面法向量。注意是 $\sin$ 不是 $\cos$。</p>
     </div>
 
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">更多公式补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        待补：线面平行/垂直判定定理 · 点到平面距离 · 异面直线夹角
-      </p>
+    <div class="formula-block">
+      <div class="formula-name">线面平行判定定理<span class="formula-tag">必写</span></div>
+      $l\not\subset\alpha$，$m\subset\alpha$，$l\parallel m$ $\Rightarrow$ $l\parallel\alpha$<br>
+      <strong>关键词：</strong>平面外、平面内、平行，三个条件缺一不可。
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">点到平面距离（等体积法）<span class="formula-tag">技巧</span></div>
+      $V=\dfrac{1}{3}Sh$。换顶点：$V_{A-BCD}=V_{B-ACD}=V_{C-ABD}=V_{D-ABC}$，哪个底面积好算就用哪个。
     </div>
   </section>
 
   <!-- 真题示范 -->
   <section class="card">
     <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">真题示范 · 内容补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        将选 1 道近年立体几何大题，演示建系四步法。
-      </p>
+    <div class="example">
+      <span class="example-tag">2022 · 新高考I卷 · 第19题（节选）</span>
+      <div class="example-q">
+        直三棱柱 $ABC-A_1B_1C_1$ 的体积为 4，$\triangle A_1BC$ 的面积为 $2\sqrt{2}$。<br>
+        (1) 求点 $A$ 到平面 $A_1BC$ 的距离；<br>
+        (2) 设 $D$ 为 $A_1C$ 的中点，$AA_1=AB$，平面 $A_1BC\perp$ 平面 $ABB_1A_1$，求二面角 $A-BD-C$ 的正弦值。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 套路：等体积法</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>$V_{A-A_1BC}=V_{A_1-ABC}=\dfrac{1}{3}S_{\triangle ABC}\cdot AA_1=\dfrac{1}{3}\times \dfrac{1}{2}V_{柱}=\dfrac{2}{3}$</li>
+          <li>设点 $A$ 到平面 $A_1BC$ 的距离为 $h$，则 $V_{A-A_1BC}=\dfrac{1}{3}S_{\triangle A_1BC}\cdot h=\dfrac{1}{3}\times 2\sqrt{2}\cdot h=\dfrac{2}{3}$</li>
+          <li>解得 $h=\dfrac{\sqrt{2}}{2}$</li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：建系 + 法向量</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>取 $A_1B$ 中点 $E$，由面 $A_1BC\perp$ 面 $ABB_1A_1$ 得 $CE\perp$ 面 $ABB_1A_1$</li>
+          <li>以 $E$ 为原点，$EB$ 为 $x$ 轴，$EC$ 为 $y$ 轴，过 $E$ 作平行于 $AA_1$ 的线为 $z$ 轴建系</li>
+          <li>设 $AA_1=AB=2$，求得各点坐标，写出 $\vec{BA}$、$\vec{BD}$、$\vec{BC}$</li>
+          <li>求平面 $ABD$ 的法向量 $\vec{n_1}$ 和平面 $CBD$ 的法向量 $\vec{n_2}$</li>
+          <li>$\cos\theta=\dfrac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}=\dfrac{1}{\sqrt{3}}$，所以 $\sin\theta=\dfrac{\sqrt{6}}{3}$</li>
+        </ol>
+      </div>
     </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 第（2）问只要"建系 → 写坐标 → 求法向量"这三步写出来，即使最后 $\sin\theta$ 算错，也有 <span class="mark">6-8 分</span>。
+    </p>
   </section>
 
   <!-- 踩坑提醒 -->

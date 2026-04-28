@@ -59,25 +59,51 @@
       <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 必须分类讨论 $n=1$ 和 $n\ge 2$，最后再验 $n=1$ 是否符合通式。</p>
     </div>
 
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">更多公式补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        待补：错位相减适用形式 · 裂项相消常见形式 · 倒序相加法
-      </p>
+    <div class="formula-block">
+      <div class="formula-name">错位相减适用形式<span class="formula-tag">必会</span></div>
+      若 $c_n=(an+b)\cdot q^n$，则 $T_n=\sum_{k=1}^n c_k$ 用错位相减。<br>
+      <strong>关键步骤：</strong>$T_n-qT_n$ 后整理成等比数列求和。
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">裂项相消常见形式<span class="formula-tag">高频</span></div>
+      $$\dfrac{1}{n(n+1)}=\dfrac{1}{n}-\dfrac{1}{n+1},\quad \dfrac{1}{n(n+2)}=\dfrac{1}{2}\left(\dfrac{1}{n}-\dfrac{1}{n+2}\right)$$
     </div>
   </section>
 
   <!-- 真题示范 -->
   <section class="card">
     <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">真题示范 · 内容补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        将选 1-2 道近年高考数列大题，逐步拆解套路与得分点。
-      </p>
+    <div class="example">
+      <span class="example-tag">2023 · 新高考I卷 · 第18题</span>
+      <div class="example-q">
+        记 $S_n$ 为数列 $\{a_n\}$ 的前 $n$ 项和，已知 $a_2=1$，$2S_n=na_n$。<br>
+        (1) 求 $\{a_n\}$ 的通项公式；<br>
+        (2) 求数列 $\left\{\dfrac{a_{n+1}}{2^n}\right\}$ 的前 $n$ 项和 $T_n$。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 套路：已知 $S_n$ 求 $a_n$</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>$n=1$ 时，$2S_1=a_1$，即 $2a_1=a_1$，所以 $a_1=0$</li>
+          <li>$n\ge 2$ 时，$2S_n=na_n$，$2S_{n-1}=(n-1)a_{n-1}$，两式相减得 $2a_n=na_n-(n-1)a_{n-1}$</li>
+          <li>整理得 $(n-2)a_n=(n-1)a_{n-1}$，递推得 $\dfrac{a_n}{a_{n-1}}=\dfrac{n-1}{n-2}$，累乘得 $a_n=n-1$</li>
+          <li>验 $n=1$：$a_1=0$ 符合 $a_n=n-1$。所以 $a_n=n-1$。</li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：错位相减</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>由（1）知 $\dfrac{a_{n+1}}{2^n}=\dfrac{n}{2^n}$，设 $T_n=\sum_{k=1}^{n}\dfrac{k}{2^k}$</li>
+          <li>$T_n=\dfrac{1}{2}+\dfrac{2}{2^2}+\dfrac{3}{2^3}+\cdots+\dfrac{n}{2^n}$</li>
+          <li>$\dfrac{1}{2}T_n=\dfrac{1}{2^2}+\dfrac{2}{2^3}+\cdots+\dfrac{n-1}{2^n}+\dfrac{n}{2^{n+1}}$</li>
+          <li>相减得 $\dfrac{1}{2}T_n=\dfrac{1}{2}+\dfrac{1}{2^2}+\cdots+\dfrac{1}{2^n}-\dfrac{n}{2^{n+1}}=1-\dfrac{1}{2^n}-\dfrac{n}{2^{n+1}}$</li>
+          <li>所以 $T_n=2-\dfrac{n+2}{2^n}$</li>
+        </ol>
+      </div>
     </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 第（1）问写出 $S_n-S_{n-1}$ 这一步就有 3 分；第（2）问只要写出错位相减的"两式相减"动作，即使后面算错也有 3 分。<span class="mark">步骤在，分就在。</span>
+    </p>
   </section>
 
   <!-- 踩坑提醒 -->

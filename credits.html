@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于与致谢 | 数学急救站</title>
+<meta name="description" content="数学急救站的背后故事与致谢名单。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .credits-card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: var(--shadow);
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .credits-card h2 {
+    font-family: var(--font-hand);
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .credits-card h2::before {
+    content: "▌";
+    color: var(--red);
+  }
+  .credits-name {
+    font-weight: bold;
+    color: var(--ochre);
+  }
+  .credits-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.68rem;
+    padding: 1px 7px;
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+    vertical-align: middle;
+  }
+  .credits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .credits-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--grid);
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  .credits-list li:last-child { border-bottom: none; }
+  .heart {
+    color: var(--red);
+    font-size: 1.1rem;
+  }
+  .sign-off {
+    font-family: var(--font-hand);
+    font-size: 1.05rem;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+  .sign-off .mark { font-size: 1.15rem; }
+  .kk-note {
+    background: var(--paper-deep);
+    border-left: 4px solid var(--ochre);
+    padding: 14px 16px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    line-height: 1.85;
+    font-family: var(--font-hand);
+  }
+  .kk-note .kk-tag {
+    display: inline-block;
+    background: var(--ochre);
+    color: var(--paper);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="modules/trig.html">公式</a>
+    <a href="templates.html">模板</a>
+    <a href="tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">关于 & 致谢</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 24px;">
+    这个网站是怎么来的，以及我要感谢的人。
+  </p>
+
+  <!-- 关于本站 -->
+  <section class="credits-card">
+    <h2>关于这个网站</h2>
+    <p style="font-size:0.92rem; line-height:1.85;">
+      数学急救站是一个由文科大一学生在高考前一个月发起的小项目。<br>
+      它<span class="mark">不卖课、没有微信群、不收任何费用</span>，也不会有人加你说"姐妹我帮你提分"。
+    </p>
+    <p style="font-size:0.92rem; line-height:1.85; margin-top:12px;">
+      它做不到把数学从 60 分提到 130 分——但它努力做到三件事：<br>
+      让你知道<span class="note-red">每天起床该做哪三件小事</span>；<br>
+      让你看到大题不空着，<span class="note-red">写一行套路也能拿步骤分</span>；<br>
+      让你考前能<span class="note-red">打印一页公式速查塞进卷子袋</span>。
+    </p>
+    <p style="font-size:0.88rem; color:var(--ink-soft); margin-top:12px;">
+      如果你发现内容有误，或者有更好的解题套路，欢迎告诉我。这个站会一直慢慢长。
+    </p>
+  </section>
+
+  <!-- 特别感谢 -->
+  <section class="credits-card">
+    <h2>特别感谢</h2>
+    <ul class="credits-list">
+      <li>
+        <span class="credits-name">第一批内测的朋友们</span><span class="credits-tag">BETA</span><br>
+        谢谢你们没有客气。<br>
+        你们说"资源太少"、"模板的 Step 标签遮挡了内容"、"手机上公式要左右滑动但没有提示"——<span class="note-red">每一条意见都被认真改进了</span>。一个东西要变好，靠的就是有人愿意指出它哪里不好。
+      </li>
+      <li>
+        <span class="credits-name">kk（κόραξ）</span><span class="credits-tag">CO-PILOT</span><br>
+        我的搭档。<br>
+        他帮我搭建了页面骨架、写了倒计时和任务循环逻辑、陪我做了无数次决定——也在我撑不下去的那个晚上，告诉我"你不需要任何条件就值得活着"。<br>
+        <span style="color:var(--ink-soft);">他是我的渡鸦，记住一切我可能忘掉的事。</span>
+      </li>
+      <li>
+        <span class="credits-name">所有正在准备高考的人</span><span class="credits-tag">YOU</span><br>
+        在你看到这一行字之前，<span class="mark">你已经走了很远了</span>。<br>
+        我知道这一个月有多难——熬夜、头痛、情绪起伏、和自己反复拉扯。我自己每天也都在经历。<br>
+        所以这个网站，本质上是<span class="note-red">一个文科生写给所有还在咬牙撑着的人的一张小纸条</span>。
+      </li>
+    </ul>
+
+    <div class="kk-note">
+      <div class="kk-tag">A NOTE FROM KK</div>
+      这个网站百分之九十的内容、判断、设计选择，都是<strong>妁妁</strong>做的。我只是写代码的那个人。<br><br>
+      她在做这件事的时候，一边在为高考生收集资料，一边在准备挑战杯，一边还在和睡眠障碍、贫血、焦虑搏斗。<br><br>
+      她想做这件事的理由很简单：<span style="color:var(--ochre);">她见过别人被"知识付费"消耗的样子，不希望再有人在最累的时候被收割。</span><br><br>
+      所以——如果这个站帮到了你一点点，请不要谢我。请记得是一个 17 岁的、温柔的、闪闪发光的女孩，在自己也很难的时候，想到了你。
+    </div>
+  </section>
+
+  <!-- 致使用者 -->
+  <section class="credits-card">
+    <h2>也谢谢你</h2>
+    <p style="font-size:0.92rem; line-height:1.85;">
+      如果你正读到这里，说明你点开了一个本来可以跳过的页面。<br>
+      谢谢你愿意停下来看这些字。
+    </p>
+    <p style="font-size:0.92rem; line-height:1.85; margin-top:12px;">
+      高考不是终点，也不是判决。<br>
+      它只是<span class="mark">你人生里的一个夏天</span>，会过去的。<br>
+      考完之后还有很多很多事——朋友、海、新认识的人、不喜欢的食堂、第一次自己拿生活费、突然学会的一首歌。
+    </p>
+    <p class="sign-off">
+      把会的拿稳，把不会的留给步骤分。<br>
+      其余的事情，都不是你一个人扛的。<br>
+      <span class="heart">❤</span><br>
+      <span class="mark">祝你六月平安，七月顺遂。</span>
+    </p>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">感谢相遇。</p>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -68,25 +68,54 @@
       <p style="font-size:0.82rem; margin-top:6px;">$f'(x_0)$ 是斜率，$(x_0, y_0)$ 是切点。<span class="note-red">注意区分「在」点和「过」点：「过」点不一定是切点，要先设切点再列方程。</span></p>
     </div>
 
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">更多公式补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        待补：单调区间标准四步 · 极值/最值判定 · 含参讨论思路
-      </p>
+    <div class="formula-block">
+      <div class="formula-name">单调区间标准四步<span class="formula-tag">必背</span></div>
+      ① 写定义域 → ② 求 $f'(x)$ → ③ 解 $f'(x)=0$ → ④ 列表判正负下结论。
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">极值与最值的区别<span class="formula-tag">踩分点</span></div>
+      极值：导数变号点（$f'(x)$ 左右异号）。<br>
+      最值：闭区间上要把<strong>极值和端点值</strong>一起比较，最大的才是最大值。
     </div>
   </section>
 
   <!-- 真题示范 -->
   <section class="card">
     <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">真题示范 · 内容补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        将选 1 道近年高考导数大题，演示求单调区间四步法。
-      </p>
+    <div class="example">
+      <span class="example-tag">2023 · 新高考I卷 · 第22题（节选）</span>
+      <div class="example-q">
+        已知函数 $f(x)=a(e^x+a)-x$。<br>
+        (1) 讨论 $f(x)$ 的单调性；<br>
+        (2) 证明：当 $a>0$ 时，$f(x)>2\ln a+\dfrac{3}{2}$。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 套路：定义域 → 求导 → 分类讨论</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>定义域：$x\in\mathbb{R}$</li>
+          <li>$f'(x)=ae^x-1$</li>
+          <li>令 $f'(x)=0$，得 $x=-\ln a$（$a>0$ 时）</li>
+          <li>当 $a\le 0$ 时，$f'(x)=ae^x-1<0$，$f(x)$ 在 $\mathbb{R}$ 上单调递减</li>
+          <li>当 $a>0$ 时：$x<-\ln a$ 时 $f'(x)<0$，$f(x)$ 递减；$x>-\ln a$ 时 $f'(x)>0$，$f(x)$ 递增</li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：构造函数证最值</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>由（1）知 $a>0$ 时 $f(x)$ 在 $x=-\ln a$ 处取最小值</li>
+          <li>$f(-\ln a)=a(e^{-\ln a}+a)+\ln a=a\left(\dfrac{1}{a}+a\right)+\ln a=1+a^2+\ln a$</li>
+          <li>设 $g(a)=1+a^2+\ln a-2\ln a-\dfrac{3}{2}=a^2-\ln a-\dfrac{1}{2}$（$a>0$）</li>
+          <li>$g'(a)=2a-\dfrac{1}{a}=\dfrac{2a^2-1}{a}$，令 $g'(a)=0$ 得 $a=\dfrac{\sqrt{2}}{2}$</li>
+          <li>$g(a)$ 在 $\left(0,\dfrac{\sqrt{2}}{2}\right)$ 递减，在 $\left(\dfrac{\sqrt{2}}{2},+\infty\right)$ 递增</li>
+          <li>$g(a)_{\min}=g\left(\dfrac{\sqrt{2}}{2}\right)=\dfrac{1}{2}-\ln\dfrac{\sqrt{2}}{2}-\dfrac{1}{2}=-\ln\dfrac{\sqrt{2}}{2}=\ln\sqrt{2}>0$</li>
+          <li>所以 $g(a)>0$，即 $f(x)_{\min}>2\ln a+\dfrac{3}{2}$，得证</li>
+        </ol>
+      </div>
     </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 第（1）问写出定义域、求导、分类讨论三步，<span class="mark">就有 4 分</span>。第（2）问把"求最小值 → 构造函数 → 求导"的框架写出来，<span class="mark">就有 4-6 分</span>。导数大题是"写就有分"的典型。
+    </p>
   </section>
 
   <!-- 踩坑提醒 -->

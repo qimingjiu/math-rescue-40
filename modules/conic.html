@@ -66,25 +66,54 @@
       <p style="font-size:0.82rem; margin-top:6px;">直线写成 $Ax + By + C = 0$ 标准形式，注意分子加绝对值。</p>
     </div>
 
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">更多公式补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        待补：双曲线方程 · 椭圆焦点弦/通径 · 圆与圆的位置关系
-      </p>
+    <div class="formula-block">
+      <div class="formula-name">双曲线 · 标准方程（焦点在 x 轴）<span class="formula-tag">必背</span></div>
+      $$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\quad(a>0,b>0)$$
+      $$c^2=a^2+b^2,\quad e=\dfrac{c}{a}>1$$
+      <p class="note-red" style="font-size:0.82rem; margin-top:6px;">※ 双曲线是 $a^2+b^2=c^2$；椭圆是 $a^2-b^2=c^2$，别混！</p>
+    </div>
+
+    <div class="formula-block">
+      <div class="formula-name">椭圆焦点弦 / 通径<span class="formula-tag">技巧</span></div>
+      通径（过焦点垂直于长轴的弦）长 $=\dfrac{2b^2}{a}$。<br>
+      焦半径：$|PF_1|=a+ex_0$，$|PF_2|=a-ex_0$。
     </div>
   </section>
 
   <!-- 真题示范 -->
   <section class="card">
     <h2 class="card-title"><span class="card-num">2</span>真题示范</h2>
-    <div class="placeholder">
-      <div class="placeholder-stamp">UNDER CONSTRUCTION</div>
-      <div class="placeholder-title">真题示范 · 内容补充中</div>
-      <p style="font-size:0.85rem; margin-top:8px;">
-        将选 1 道近年高考圆锥曲线大题，演示「联立五步法」。
-      </p>
+    <div class="example">
+      <span class="example-tag">2023 · 新高考I卷 · 第21题（节选）</span>
+      <div class="example-q">
+        已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a>b>0)$ 的离心率为 $\dfrac{\sqrt{5}}{3}$，点 $A(-2,0)$ 在 $C$ 上。<br>
+        (1) 求 $C$ 的方程；<br>
+        (2) 过点 $(-2,3)$ 的直线交 $C$ 于 $P,Q$ 两点，直线 $AP,AQ$ 与 $y$ 轴交于 $M,N$ 两点，证明：线段 $MN$ 的中点为定点。
+      </div>
+      <div class="example-a">
+        <strong class="note-red">第（1）问 · 送分</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>$A(-2,0)$ 在椭圆上 $\Rightarrow a=2$</li>
+          <li>$e=\dfrac{c}{a}=\dfrac{\sqrt{5}}{3}$ $\Rightarrow c=\dfrac{2\sqrt{5}}{3}$</li>
+          <li>$b^2=a^2-c^2=4-\dfrac{20}{9}=\dfrac{16}{9}$，所以方程为 $\dfrac{x^2}{4}+\dfrac{9y^2}{16}=1$</li>
+        </ol>
+
+        <strong class="note-red" style="display:block; margin-top:14px;">第（2）问 · 套路：设直线 → 联立 → 韦达 → 代入</strong>
+        <ol class="steps" style="margin-top:8px;">
+          <li>设直线 $PQ:y-3=k(x+2)$，即 $y=kx+2k+3$</li>
+          <li>联立椭圆方程：$\dfrac{x^2}{4}+\dfrac{9(kx+2k+3)^2}{16}=1$</li>
+          <li>整理得 $(4+9k^2)x^2+18k(2k+3)x+9(2k+3)^2-16=0$</li>
+          <li>设 $P(x_1,y_1),Q(x_2,y_2)$，由韦达：$x_1+x_2=-\dfrac{18k(2k+3)}{4+9k^2}$，$x_1x_2=\dfrac{9(2k+3)^2-16}{4+9k^2}$</li>
+          <li>直线 $AP:y=\dfrac{y_1}{x_1+2}(x+2)$，令 $x=0$ 得 $M\left(0,\dfrac{2y_1}{x_1+2}\right)$；同理 $N\left(0,\dfrac{2y_2}{x_2+2}\right)$</li>
+          <li>中点纵坐标 $=\dfrac{1}{2}\left(\dfrac{2y_1}{x_1+2}+\dfrac{2y_2}{x_2+2}\right)=\dfrac{y_1}{x_1+2}+\dfrac{y_2}{x_2+2}$，代入 $y=kx+2k+3$ 化简得 $=3$</li>
+          <li>所以 $MN$ 中点为定点 $(0,3)$</li>
+        </ol>
+      </div>
     </div>
+
+    <p class="note-red" style="font-size:0.88rem; margin-top:14px;">
+      ※ 第（2）问即使没证出中点是定点，<span class="mark">设直线、联立、写韦达、写 $M,N$ 坐标这四步写出来就有 6 分</span>。圆锥曲线是"步骤分之王"。
+    </p>
   </section>
 
   <!-- 踩坑提醒 -->
