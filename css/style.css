@@ -243,6 +243,7 @@ body {
   border-left: 4px solid var(--red);
   padding: 12px 14px;
   margin: 10px 0;
+  position: relative;
 }
 .formula-block .formula-name {
   font-size: 0.85rem;
@@ -259,6 +260,38 @@ body {
   margin-left: 6px;
   vertical-align: middle;
 }
+/* KaTeX 公式横向滚动（公式过长时可手动滑） */
+.formula-block .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.formula-block .katex-display::-webkit-scrollbar { height: 4px; }
+.formula-block .katex-display::-webkit-scrollbar-thumb {
+  background: var(--grid);
+  border-radius: 2px;
+}
+
+/* 移动端 · 公式横滑提示条（页面顶部一次性显示） */
+.scroll-hint {
+  display: none;
+}
+@media (max-width: 600px) {
+  .scroll-hint {
+    display: block;
+    background: #fff8e8;
+    border: 1px dashed var(--ochre);
+    color: var(--ochre);
+    padding: 6px 10px;
+    margin: 8px 0 14px;
+    font-size: 0.78rem;
+    text-align: center;
+    font-family: var(--font-hand);
+    letter-spacing: 1px;
+  }
+}
 
 /* ========== 大题模板（步骤） ========== */
 .steps {
@@ -266,21 +299,19 @@ body {
   list-style: none;
 }
 .steps li {
-  position: relative;
-  padding: 10px 0 10px 40px;
+  padding: 14px 0 12px;
   border-bottom: 1px dashed var(--grid);
 }
 .steps li::before {
   counter-increment: step;
   content: "Step " counter(step);
-  position: absolute;
-  left: 0;
-  top: 12px;
+  display: inline-block;
+  margin-bottom: 6px;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   background: var(--ink);
   color: var(--paper);
-  padding: 2px 6px;
+  padding: 2px 8px;
   letter-spacing: 1px;
 }
 .steps li:last-child { border-bottom: none; }
