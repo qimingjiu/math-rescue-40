@@ -68,13 +68,16 @@ function renderTodayTasks() {
 
   // D-X
   const diffDays = Math.max(0, Math.ceil((GAOKAO - now) / (1000 * 60 * 60 * 24)));
-  const dLabel = `D-${diffDays}`;
+  const dLabel = diffDays === 0 ? 'D-Day' : `D-${diffDays}`;
 
   // 今日主题
   const titleEl = document.getElementById('today-title');
   if (titleEl) titleEl.textContent = `今日任务（${dLabel} · ${plan.topic}）`;
 
-  const todayKey = now.toISOString().slice(0, 10);
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  const todayKey = `${y}-${m}-${d}`;
   const html = plan.tasks.map((t, i) => {
     const key = `task-${todayKey}-${i}`;
     const done = localStorage.getItem(key) === '1';
@@ -119,6 +122,15 @@ function setQuote() {
   const el = document.getElementById('quote');
   if (!el) return;
   el.textContent = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+}
+
+// 打印适配（移动端提示截图）
+function printPage() {
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    alert('手机浏览器通常不支持直接打印。\n你可以截图保存本页，或发送到电脑打印。');
+  } else {
+    window.print();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

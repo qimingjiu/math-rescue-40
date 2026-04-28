@@ -382,6 +382,25 @@ body {
 .note-red.task-foot { margin-top: 14px; font-size: 0.88rem; }
 .task-link { color: var(--ochre); }
 
+/* ========== 移动端优化 ========== */
+@media (max-width: 480px) {
+  .countdown-num { font-size: 3.2rem; }
+  .countdown-label { font-size: 0.85rem; }
+  .topbar { flex-wrap: wrap; gap: 6px; padding: 10px 12px; }
+  .topbar .logo { font-size: 1.05rem; letter-spacing: 1px; }
+  .topbar .logo .stamp { font-size: 0.65rem; padding: 1px 5px; }
+  .topbar nav a { margin-left: 10px; font-size: 0.78rem; }
+  .entry-grid { gap: 8px; }
+  .entry-card { padding: 12px 6px; }
+  .entry-card .entry-title { font-size: 0.95rem; }
+  .card { padding: 14px; }
+  .card-title { font-size: 1.05rem; }
+  .formula-block { overflow-x: auto; }
+  .katex-display { overflow-x: auto; padding-bottom: 4px; }
+  .steps li { padding-left: 34px; }
+  .steps li::before { font-size: 0.62rem; padding: 1px 4px; }
+}
+
 /* ========== 桌面增强 ========== */
 @media (min-width: 768px) {
   .container { padding: 32px 24px; }
