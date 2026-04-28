@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资源库 · 真题与工具 | 数学急救站</title>
+<meta name="description" content="高考数学真题下载、官方资源、在线工具汇总。链接直达，分类清晰。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .res-section { margin-bottom: 28px; }
+  .res-section h2 {
+    font-family: var(--font-hand);
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .res-section h2::before {
+    content: "▌";
+    color: var(--red);
+  }
+  .res-list {
+    list-style: none;
+    padding: 0;
+  }
+  .res-list li {
+    border-bottom: 1px dashed var(--grid);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .res-list li:last-child { border-bottom: none; }
+  .res-list a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .res-list a:hover { text-decoration: underline; }
+  .res-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border: 1px solid var(--ink);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+  }
+  .res-tag.free { background: var(--green); color: #fff; border-color: var(--green); }
+  .res-tag.reg { background: var(--ochre); color: #fff; border-color: var(--ochre); }
+  .res-desc {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    width: 100%;
+    margin-top: 4px;
+  }
+  .disclaimer {
+    background: #fff8e8;
+    border: 1px dashed var(--ink);
+    padding: 14px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .disclaimer::before {
+    content: "※ ";
+    color: var(--red);
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="logo">数学急救站<span class="stamp">RESCUE 40</span></div>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="modules/trig.html">公式</a>
+    <a href="templates.html">模板</a>
+    <a href="tips.html">技巧</a>
+  </nav>
+</header>
+
+<main class="container">
+
+  <div style="margin-bottom:18px;" class="no-print">
+    <a href="index.html" style="color:var(--ink-soft); text-decoration:none; font-size:0.85rem;">← 返回首页</a>
+  </div>
+
+  <h1 style="font-family: var(--font-hand); font-size: 1.6rem; margin-bottom: 4px;">资源库</h1>
+  <p style="color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 18px;">
+    真题、官方渠道、实用工具。按需自取，不必全看。
+  </p>
+
+  <div class="disclaimer">
+    链接指向第三方平台，本站不存储文件。如遇链接失效，请直接搜索对应平台名称访问。
+  </div>
+
+  <!-- 可直接用 -->
+  <section class="card res-section">
+    <h2>可直接用（无需注册）</h2>
+    <ul class="res-list">
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://gaokao.eol.cn/" target="_blank" rel="noopener">中国教育在线 · 高考频道</a>
+        <span class="res-desc">国家政策、分数线、院校库。真题栏目有历年试卷汇总。</span>
+      </li>
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://www.neea.edu.cn/" target="_blank" rel="noopener">教育部教育考试院</a>
+        <span class="res-desc">官方考试政策发布平台，考试大纲和命题说明最权威。</span>
+      </li>
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://gaokao.chsi.com.cn/" target="_blank" rel="noopener">阳光高考信息平台</a>
+        <span class="res-desc">学信网旗下，招生章程、志愿填报、专业解读一站式。</span>
+      </li>
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://www.bjeea.cn/" target="_blank" rel="noopener">北京教育考试院</a>
+        <span class="res-desc">示例：各省考试院官网都有"往届试题"栏目，搜"XX省教育考试院"即可。</span>
+      </li>
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra 图形计算器</a>
+        <span class="res-desc">在线画图、函数、几何、统计。验证答案、辅助理解非常好用。</span>
+      </li>
+      <li>
+        <span class="res-tag free">免费</span>
+        <a href="https://www.wolframalpha.com/" target="_blank" rel="noopener">WolframAlpha</a>
+        <span class="res-desc">解方程、求导、积分、画函数图像。算错了用它验算。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 需注册 -->
+  <section class="card res-section">
+    <h2>需注册 / 部分付费（资源更全）</h2>
+    <ul class="res-list">
+      <li>
+        <span class="res-tag reg">需注册</span>
+        <a href="https://www.zxxk.com/" target="_blank" rel="noopener">学科网</a>
+        <span class="res-desc">真题、模拟题、课件最齐全，老师备课常用。部分免费，精品需点数。</span>
+      </li>
+      <li>
+        <span class="res-tag reg">需注册</span>
+        <a href="https://www.jyeoo.com/" target="_blank" rel="noopener">菁优网</a>
+        <span class="res-desc">题库量大，按考点、难度筛选很方便。解析详细，适合查具体题型。</span>
+      </li>
+      <li>
+        <span class="res-tag reg">需注册</span>
+        <a href="https://www.ks5u.com/" target="_blank" rel="noopener">高考资源网</a>
+        <span class="res-desc">试卷、专题、一轮/二轮复习资料齐全，适合批量下载。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 打印建议 -->
+  <section class="card">
+    <h2 class="card-title">最推荐的复习方式</h2>
+    <p style="font-size:0.92rem; line-height:1.85;">
+      网站刷题效率其实不高。<span class="mark">最实用的做法</span>是：<br>
+      1. 在本站看完公式和模板 → <span class="note-red">截图或打印</span><br>
+      2. 去淘宝/拼多多花几块钱买"近五年高考真题汇编"PDF → <span class="note-red">打印出来掐表做</span><br>
+      3. 不会的题回本站查套路 → <span class="note-red">再打印对应模板贴在错题旁边</span>
+    </p>
+    <p class="note-red" style="margin-top:12px; font-size:0.88rem;">
+      ※ 纸笔做题的专注度，是屏幕刷题的 3 倍。最后 40 天，尽量用纸。
+    </p>
+  </section>
+
+  <div class="no-print" style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn-print" style="background:var(--paper-deep); color:var(--ink); border:2px solid var(--ink);">← 回急救站</a>
+  </div>
+
+</main>
+
+<p class="footer-quote no-print">工具是辅助，纸笔才是主战场。</p>
+
+<script src="js/main.js"></script>
+</body>
+</html>
